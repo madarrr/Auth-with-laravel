@@ -10,7 +10,8 @@
 </head>
 <body class="big-bg-design">
   <section>
-    <form action="/" class="container" method="post">
+    <form action="{{ route('authenticate') }}" class="container" method="post">
+        @csrf
            <div class="card-design" style="float:right" id=style-bg>
            <img src="/images/authi-bg.png" alt="" class="bg-resize col-sm-1" style="float:left">
                 <div class="imgmove">
@@ -18,10 +19,10 @@
                     <h3>Login</h3>
                 </div>
                     <div class="mb-3">
-                    <input type="email" class="col-md-3 col-sm-1" id="exampleInputEmail1"  placeholder="Username">
+                    <input type="email" class="col-md-3 col-sm-1" name="email" id="exampleInputEmail1"  placeholder="Username">
                 </div>
                 <div class="mb-3">
-                    <input type="password" class="col-md-3 col-sm-1" id="exampleInputPassword1" placeholder="Password" >
+                    <input type="password" class="col-md-3 col-sm-1" name="password" id="exampleInputPassword1" placeholder="Password" >
                 </div> 
                 <div class="mb-3">
                     <button type="submit" class="btn btn-primary col-sm-1" id="buttonstyle">Sign in</button> 

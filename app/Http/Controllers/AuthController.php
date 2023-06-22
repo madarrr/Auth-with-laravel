@@ -11,5 +11,17 @@ class AuthController extends Controller
     {
           return view('auth');
     }
+    public function auth(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required'
+        ]);
+        if (auth()->attempt($request->only('email','password')))
+        {
+           return redirect()->route('dashboard');
+        }
+        return redirect()->back()->withErrors('les identifiants ne corespondes pas');
+    }
 
 }
