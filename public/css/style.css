@@ -1,0 +1,111 @@
+.container{
+    padding-top: 5.5%;
+   text-align: center;
+    
+
+}
+.card-design{
+    padding-top: 12%;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px; 
+    width: 100%;
+    height: 100%;
+    background-color: dodgerblue;
+   text-align: center;
+    
+}
+#style-bg{
+    background-color: white;
+    background-image: linear-gradient(to right,dodgerblue,50%,rgba(0,0,0,0)50%);
+}
+.big-bg-design{
+    background-color: lightskyblue;
+}
+.bg-resize{
+    padding-bottom: 5%;
+    width: 700px;
+    height: 550px;
+}
+.mb-3{
+    text-align: center;
+    
+}
+.col-md-3{
+    height: 45px;
+}
+#buttonstyle{
+    width: 25%;
+    border-radius: 20px;
+    background-color: dodgerblue;    
+    
+}
+#buttonstyle:hover{
+    background-color: royalblue;    
+    
+}
+.imgmove{
+    text-align: center;
+}
+#resize{
+    width: 285px;
+    height: 285px;
+}
+h3{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: grey;
+}
+@media only screen  and (max-width: 1200px) {
+    .container{
+        margin: auto;
+        padding: 5%;
+    }
+    .card-design{
+        border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px; 
+        text-align: center!important;
+        height: 750px;
+    
+    }
+    #style-bg{
+        background-color: white;
+        background-image: linear-gradient(to right,white,50%,rgba(0,0,0,0)50%);
+    }
+   
+    .bg-resize{
+       display: none;
+    }
+    .mb-3{
+        text-align: center;
+        
+    }
+    .col-md-3{
+        height: 45px;
+        width: 75%;
+    }
+    #buttonstyle{
+        width: 75%;
+        border-radius: 20px;
+        background-color: dodgerblue;    
+        
+    }
+    #buttonstyle:hover{
+        background-color: royalblue;    
+        
+    }
+    .imgmove{
+        text-align: center;
+    }
+    #resize{
+        width: 285px;
+        height: 285px;
+    }
+    h3{
+        
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: grey;
+    }
+
+}
