@@ -24,4 +24,10 @@ class AuthController extends Controller
         return redirect()->back()->withErrors('les identifiants ne corespondes pas');
     }
 
+    public function destroy()
+    {
+        auth()->logout();
+        return redirect()->route('login');
+    }
+
 }
