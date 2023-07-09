@@ -20,5 +20,5 @@ Route::get('/', function () {
 });
 Route::get('/dashboard',[DashboardController::class,'show'])->name('dashboard');
 Route::get('/login',[AuthController::class,'login'])->name('login');
-Route::post('/login',[AuthController::class,'auth'])->name('authenticate');
+Route::post('/login',[AuthController::class,'auth'])->name('authenticate')->middleware('admin');
 Route::post('/logout',[AuthController::class,'destroy'])->name('logout');
