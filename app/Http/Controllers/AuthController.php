@@ -11,6 +11,10 @@ class AuthController extends Controller
     {
           return view('auth');
     }
+    public function coUser()
+    {
+        return view('homeland');
+    }
     public function auth(Request $request)
     {
         $request->validate([

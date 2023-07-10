@@ -18,7 +18,11 @@ use App\Http\Controllers\DashboardController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/dashboard',[DashboardController::class,'show'])->name('dashboard');
+
 Route::get('/login',[AuthController::class,'login'])->name('login');
-Route::post('/login',[AuthController::class,'auth'])->name('authenticate')->middleware('admin');
+Route::group(['middleware' => ['admin']], function () {
+    Route::get('/dashboard',[DashboardController::class,'show'])->name('dashboard');
+ });
+ Route::post('/login',[AuthController::class,'auth'])->name('authenticate');
+Route::get('/homeland',[AuthController::class,'coUser'])->name('homeland');
 Route::post('/logout',[AuthController::class,'destroy'])->name('logout');

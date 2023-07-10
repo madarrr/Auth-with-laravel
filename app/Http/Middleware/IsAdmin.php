@@ -20,7 +20,8 @@ class IsAdmin
         {
             return $next($request);
         }
-        return redirect()->route('login')->with('error','You have not admin access');
+ 
+        return redirect()->route('homeland')->with('error','You have not admin access');
     
     }
 }
